@@ -4,7 +4,33 @@
  * Object memiliki property: name, age, major.
  * Note: Ubah var menggunakan JavaScript Modern.
  */
-var users;
+let users = [
+  {
+    name: "Amar",
+    age: 21,
+    major: "Software Engineering",
+  },
+  {
+    name: "Adryan",
+    age: 21,
+    major: "Software Engineering",
+  },
+  {
+    name: "Dimas",
+    age: 20,
+    major: "Network Engineering",
+  },
+  {
+    name: "Fadel",
+    age: 22,
+    major: "Data Engineering",
+  },
+  {
+    name: "Fajri",
+    age: 20,
+    major: "Software Engineering",
+  },
+];
 
 /**
  * TODO 2
@@ -12,7 +38,11 @@ var users;
  * Hint: Gunakan for/for-of.
  * Note: Ubah function menggunakan arrow function.
  */
-function all() {}
+const all = () => {
+  for (const user of users) {
+  }
+  console.table(users);
+};
 
 /**
  * TODO 3
@@ -20,7 +50,9 @@ function all() {}
  * Hint: Gunakan method push.
  * Note: Ubah function menggunakan arrow function.
  */
-function store(user) {}
+const store = (user) => {
+  users.push(user);
+};
 
 /**
  * TODO 4.
@@ -28,7 +60,9 @@ function store(user) {}
  * Hint: re-assign array.
  * Note: Ubah function menggunakan arrow function.
  */
-function update(index, user) {}
+const update = (index, user) => {
+  users[index] = user;
+};
 
 /**
  * TODO 5.
@@ -36,7 +70,9 @@ function update(index, user) {}
  * Hint: Gunakan method splice.
  * Note: Ubah function menggunakan arrow function.
  */
-function destroy(index) {}
+const destroy = (index) => {
+  users.splice(index, 1);
+};
 
 /**
  * Function main.
