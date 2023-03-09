@@ -40,6 +40,9 @@ let users = [
  */
 const all = () => {
   for (const user of users) {
+    // console.log(`Nama    : ${user.name}`);
+    // console.log(`Umur    : ${user.age}`);
+    // console.log(`Jurusan : ${user.major}`);
   }
   console.table(users);
 };
