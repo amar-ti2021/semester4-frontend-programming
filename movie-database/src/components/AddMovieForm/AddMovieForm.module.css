@@ -1,0 +1,81 @@
+/* Small Screen */
+.container {
+  margin: 1rem;
+}
+
+.addMovieForm {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.addMovieForm__left {
+  margin-bottom: 1rem;
+}
+
+.addMovieForm__title {
+  text-align: center;
+  color: #4361ee;
+  margin-bottom: 1rem;
+  font-size: 2.44rem;
+}
+.addMovieForm__form {
+  padding: 5rem 3rem 5rem;
+  display: flex;
+  flex-direction: column;
+}
+.addMovieForm__label {
+  color: #4361ee;
+}
+.addMovieForm__input {
+  border-color: #4361ee;
+  padding: 0.6rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.addMovieForm__button {
+  width: 100%;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #4361ee;
+  color: #fff;
+}
+
+.addMovieForm__image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 25px;
+}
+
+/* Medium Screen */
+@media (min-width: 768px) {
+  /*
+     * Nothing TODO Here.
+     * We dont change style addMovieForm. 
+     */
+}
+
+/* Large Screen */
+@media (min-width: 992px) {
+  .container {
+    max-width: 1200px;
+    margin: 3rem auto;
+  }
+
+  .addMovieForm {
+    margin: 0 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .addMovieForm__right {
+    flex-basis: 40%;
+  }
+
+  .addMovieForm__left {
+    flex-basis: 60%;
+  }
+}
