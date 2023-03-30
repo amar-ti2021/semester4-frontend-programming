@@ -1,14 +1,23 @@
 import Hello from "./Hello";
-import React from "react";
 
-const Main = () => {
+/**
+ * Membuat component Main.
+ * Component Main menampung konten utama.
+ */
+function Main() {
   return (
-    <div>
-      <Hello name="Amar" jurusan="Informatika" />
-      <Hello name="Adryan" jurusan="Informatika" />
-      <Hello name="Abiyyu" jurusan="Informatika" />
-    </div>
+    <main>
+      {/**
+       * Mengirim props ke component Hello.
+       * nama props: name
+       */}
+      <Hello name="Aufa" />
+      <Hello name="Mikel" />
+      <Hello name="Hannah" />
+      <Hello name="Jonas" />
+      <Hello name="Martha" />
+    </main>
   );
-};
+}
 
 export default Main;

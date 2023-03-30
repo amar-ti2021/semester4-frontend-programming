@@ -1,12 +1,18 @@
-import React from "react";
+/**
+ * Membuat component Hello.
+ * Component Hello menerima inputan: props.
+ *
+ */
+function Hello(props) {
+  // Melakukan destructing props (object)
+  const { name } = props;
 
-const Hello = (props) => {
   return (
-    <div>
-      <h1>Saya {props.name}</h1>
-      <h2>Saya {props.jurusan}</h2>
+    <div className="hello">
+      <h2>Hello React</h2>
+      <p>Saya {name} - Frontend Engineer</p>
     </div>
   );
-};
+}
 
 export default Hello;

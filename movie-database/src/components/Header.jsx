@@ -1,13 +1,17 @@
-import React from "react";
-
-const Header = () => {
+/**
+ * Membuat component Header.
+ * Component Header menampilkan navigasi.
+ */
+function Header() {
   return (
-    <ul>
-      <li>Home</li>
-      <li>About</li>
-      <li>Contacts</li>
-    </ul>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
   );
-};
+}
 
 export default Header;
