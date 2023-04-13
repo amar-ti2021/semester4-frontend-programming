@@ -25,15 +25,16 @@
   flex-direction: column;
 }
 .addMovieForm__label {
+  margin-top: 1rem;
   color: #4361ee;
 }
 .addMovieForm__input {
   border-color: #4361ee;
   padding: 0.6rem;
   border-radius: 10px;
-  margin-bottom: 1rem;
 }
 .addMovieForm__button {
+  margin-top: 1rem;
   width: 100%;
   padding: 0.6rem;
   border: none;
