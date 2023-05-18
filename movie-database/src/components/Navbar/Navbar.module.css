@@ -20,9 +20,14 @@
   flex-direction: column;
   list-style: none;
 }
-
 .navbar__item {
   margin-bottom: 1rem;
+}
+
+.navbar__item a {
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: white;
 }
 
 /* Medium Screen */
