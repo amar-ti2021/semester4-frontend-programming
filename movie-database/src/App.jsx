@@ -6,6 +6,7 @@ import NowPlaying from "./pages/movie/NowPlaying";
 import Popular from "./pages/movie/PopularMovie";
 import TopRated from "./pages/movie/TopRated";
 import { Layout } from "./layout";
+import Counter from "./Counter";
 
 function App() {
   /**
@@ -19,6 +20,7 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />}></Route>
+          <Route path="/counter" element={<Counter />}></Route>
           <Route path="/movie/create" element={<CreateMovie />}></Route>
           <Route path="/movie/popular" element={<Popular />}></Route>
           <Route path="/movie/top-rated" element={<TopRated />}></Route>
