@@ -3,6 +3,7 @@
  * Disimpan di object styles.
  */
 import styles from "./Footer.module.css";
+import FooterStyled from "./FooterStyled";
 
 function Footer() {
   /**
@@ -10,12 +11,12 @@ function Footer() {
    * Memanggilnya menggunakan expression.
    */
   return (
-    <div className={styles.container}>
-      <footer className={styles.footer}>
-        <h2 className={styles.footer__title}>Movie App</h2>
-        <p className={styles.footer__author}>Created by aufaroot18</p>
+    <FooterStyled>
+      <footer className="footer">
+        <h2 className="footer__title">Movie App</h2>
+        <p className="footer__author">Created by aufaroot18</p>
       </footer>
-    </div>
+    </FooterStyled>
   );
 }
 

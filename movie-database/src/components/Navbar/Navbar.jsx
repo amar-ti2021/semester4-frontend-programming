@@ -3,7 +3,7 @@
  * Disimpan di object styles.
  */
 import { Link } from "react-router-dom";
-import styles from "./Navbar.module.css";
+import NavbarStyled from "./NavbarStyled";
 
 function Navbar() {
   /**
@@ -11,32 +11,32 @@ function Navbar() {
    * Memanggilnya menggunakan expression.
    */
   return (
-    <div className={styles.container}>
-      <nav className={styles.navbar}>
+    <NavbarStyled>
+      <nav className="navbar">
         <div>
-          <h1 className={styles.navbar__brand}>Movie App</h1>
+          <h1 className="navbar__brand">Movie App</h1>
         </div>
         <div>
-          <ul className={styles.navbar__list}>
-            <li className={styles.navbar__item}>
+          <ul className="navbar__list">
+            <li className="navbar__item">
               <Link to="/"> Home </Link>
             </li>
-            <li className={styles.navbar__item}>
+            <li className="navbar__item">
               <Link to="/movie/create"> Add Movie </Link>
             </li>
-            <li className={styles.navbar__item}>
+            <li className="navbar__item">
               <Link to="/movie/popular"> Popular </Link>
             </li>
-            <li className={styles.navbar__item}>
+            <li className="navbar__item">
               <Link to="/movie/now-playing"> Now Playing </Link>
             </li>
-            <li className={styles.navbar__item}>
+            <li className="navbar__item">
               <Link to="/movie/top-rated"> Top Rated </Link>
             </li>
           </ul>
         </div>
       </nav>
-    </div>
+    </NavbarStyled>
   );
 }
 

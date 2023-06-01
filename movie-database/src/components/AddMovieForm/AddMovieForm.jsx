@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "./AddMovieForm.module.css";
 import { nanoid } from "nanoid";
 import Alert from "../Alert/Alert";
+import Button from "../../ui/Button";
 
 function AddMovieForm(props) {
   const { movies, setMovies } = props;
@@ -96,7 +97,7 @@ function AddMovieForm(props) {
               <option value="Drama">Drama</option>
             </select>
             {input.type.error && <Alert>Type harus dipilih!</Alert>}
-            <button className={styles.addMovieForm__button}>Submit</button>
+            <Button variant="secondary">Submit</Button>
           </form>
         </div>
       </section>

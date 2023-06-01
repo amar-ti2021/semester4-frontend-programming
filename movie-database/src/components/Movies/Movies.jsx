@@ -1,6 +1,6 @@
-import styles from "./Movies.module.css";
 import Movie from "../Movie/Movie";
 import { nanoid } from "nanoid";
+import StyledMovies from "./StyledMovies";
 
 function Movies(props) {
   const { movies, setMovies } = props;
@@ -15,17 +15,17 @@ function Movies(props) {
     setMovies([...movies, movie]);
   };
   return (
-    <div className={styles.container}>
-      <section className={styles.movies}>
-        <h2 className={styles.movies__title}>Latest Movies</h2>
-        <div className={styles.movie__container}>
+    <StyledMovies>
+      <section>
+        <h2>Latest Movies</h2>
+        <div>
           {movies.map((movie) => (
             <Movie key={movie.id} movie={movie} />
           ))}
         </div>
         <button onClick={handleClick}>add movie</button>
       </section>
-    </div>
+    </StyledMovies>
   );
 }
 

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import styles from "./Hero.module.css";
+import Button from "../../ui/Button";
+import HeroStyled from "./HeroStyled";
 
 function Hero() {
   const [movie, setMovie] = useState("");
@@ -14,23 +15,19 @@ function Hero() {
     fetchMovie();
   }, []);
   return (
-    <div className={styles.container}>
-      <section className={styles.hero}>
-        <div className={styles.hero__left}>
-          <h2 className={styles.hero__title}>{movie.Title}</h2>
-          <h3 className={styles.hero__genre}>Genre: {movie.Genre}</h3>
-          <p className={styles.hero__description}>{movie.Plot}</p>
-          <button className={styles.hero__button}>Watch</button>
+    <HeroStyled>
+      <section className="hero">
+        <div className="hero__left">
+          <h2 className="hero__title">{movie.Title}</h2>
+          <h3 className="hero__genre">Genre: {movie.Genre}</h3>
+          <p className="hero__description">{movie.Plot}</p>
+          <Button variant="danger">Watch</Button>
         </div>
         <div className="hero__right">
-          <img
-            className={styles.hero__image}
-            src={movie.Poster}
-            alt="placeholder"
-          />
+          <img className="hero__image" src={movie.Poster} alt="placeholder" />
         </div>
       </section>
-    </div>
+    </HeroStyled>
   );
 }
 
