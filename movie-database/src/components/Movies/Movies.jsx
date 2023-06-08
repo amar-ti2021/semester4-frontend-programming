@@ -17,7 +17,7 @@ function Movies(props) {
   return (
     <StyledMovies>
       <section>
-        <h2>Latest Movies</h2>
+        <h2>{props.pageTitle || "Latest Movies"}</h2>
         <div>
           {movies.map((movie) => (
             <Movie key={movie.id} movie={movie} />
