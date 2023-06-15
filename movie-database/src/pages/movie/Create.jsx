@@ -1,6 +1,6 @@
 // Import Navbar, Hero, Movies, Footer Component
 
-function CreateMovie() {
+function Create() {
   return (
     <>
       <h2>Create Movie</h2>
@@ -8,4 +8,4 @@ function CreateMovie() {
   );
 }
 
-export default CreateMovie;
+export default Create;

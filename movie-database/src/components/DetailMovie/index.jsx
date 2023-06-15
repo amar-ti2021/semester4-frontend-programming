@@ -1,29 +1,23 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import Button from "../../ui/Button";
 import ENDPOINTS from "../../utils/constants/endpoints";
-import HeroStyled from "./HeroStyled";
+import HeroStyled from "../Hero/HeroStyled";
 
-function Hero() {
+const DetailMovie = () => {
   const [movie, setMovie] = useState("");
+  const params = useParams();
+  const id = params.id;
   const genres = movie && movie.genres.map((genre) => genre.name).join(", ");
   const idTrailer = movie && movie.videos.results[0].key;
-  const fetchMovie = async () => {
-    const response = await axios(ENDPOINTS.TRENDING);
-    return response.data.results[0];
-  };
-
   async function getDetailMovie() {
-    const trendingMovie = await fetchMovie();
-    const id = trendingMovie.id;
-
     const response = await axios(ENDPOINTS.DETAIL(id));
-
     setMovie(response.data);
   }
   useEffect(() => {
     getDetailMovie();
-  }, []);
+  }, [id]);
   return (
     <HeroStyled>
       <section className="hero">
@@ -50,6 +44,6 @@ function Hero() {
       </section>
     </HeroStyled>
   );
-}
+};
 
-export default Hero;
+export default DetailMovie;
