@@ -1,19 +1,9 @@
 import Movie from "../Movie/Movie";
-import { nanoid } from "nanoid";
 import StyledMovies from "./StyledMovies";
+import { useSelector } from "react-redux";
 
 function Movies(props) {
-  const { movies, setMovies } = props;
-  const handleClick = () => {
-    const movie = {
-      id: nanoid(),
-      title: "Jigsaw Spiral",
-      year: 2021,
-      type: "Movie",
-      poster: "https://picsum.photos/300/400",
-    };
-    setMovies([...movies, movie]);
-  };
+  const movies = props.movies || useSelector((store) => store.movies.movies);
   return (
     <StyledMovies>
       <section>
@@ -23,7 +13,6 @@ function Movies(props) {
             <Movie key={movie.id} movie={movie} />
           ))}
         </div>
-        <button onClick={handleClick}>add movie</button>
       </section>
     </StyledMovies>
   );

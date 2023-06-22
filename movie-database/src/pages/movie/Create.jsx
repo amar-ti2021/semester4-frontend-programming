@@ -1,9 +1,11 @@
 // Import Navbar, Hero, Movies, Footer Component
 
-function Create() {
+import AddMovieForm from "../../components/AddMovieForm/AddMovieForm";
+
+function Create({ movies, setMovies }) {
   return (
     <>
-      <h2>Create Movie</h2>
+      <AddMovieForm movies={movies} setMovies={setMovies} />
     </>
   );
 }

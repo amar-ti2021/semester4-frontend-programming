@@ -3,10 +3,14 @@ import styles from "./AddMovieForm.module.css";
 import { nanoid } from "nanoid";
 import Alert from "../Alert/Alert";
 import Button from "../../ui/Button";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addMovie } from "../../features/movieSlice";
 
 function AddMovieForm(props) {
+  const navigate = useNavigate();
   const { movies, setMovies } = props;
-
+  const dispatch = useDispatch();
   const [input, setInput] = useState({
     title: { value: "", error: false },
     date: { value: "", error: false },
@@ -39,7 +43,9 @@ function AddMovieForm(props) {
         type: input.type.value,
         poster: input.image.value,
       };
+      dispatch(addMovie(movie));
       setMovies([...movies, movie]);
+      navigate("/");
     }
   };
   return (
