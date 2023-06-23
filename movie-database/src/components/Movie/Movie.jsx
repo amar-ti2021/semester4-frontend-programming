@@ -3,7 +3,7 @@ import StyledMovie from "./StyledMovie";
 const Movie = (props) => {
   const { movie } = props;
   return (
-    <Link to={`/movie/${movie.id}`}>
+    
       <StyledMovie>
         <img
           src={
@@ -12,10 +12,11 @@ const Movie = (props) => {
           }
           alt={movie.title}
         />
+        <Link to={`/movie/${movie.id}`}>
         <h3>{movie.title}</h3>
+        </Link>
         <p>{movie.year || movie.release_date}</p>
       </StyledMovie>
-    </Link>
   );
 };
 
